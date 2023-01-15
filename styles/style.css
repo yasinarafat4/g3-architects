@@ -1,160 +1,202 @@
 /* ------------------------
 common styles or utilities
 ------------------------- */
-*{
-    /* margin: 0; */
-    padding: 0;
+* {
+  /* margin: 0; */
+  padding: 0;
 }
-body{
-    font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
 }
-.span-color-primary, .features-description, .features-secondary-text{
-    color: #727272;
+.span-color-primary,
+.features-description,
+.features-secondary-text {
+  color: #727272;
 }
 /* -------------------
 navbar section styles
 ---------------------- */
-.navbar{
-    display: flex;
-    background-color: rgba(255, 144, 14, 0.1);
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    height: 20vh;
+.navbar {
+  display: flex;
+  background-color: rgba(255, 144, 14, 0.1);
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 20vh;
 }
 
-.navbar > ul{
-    display: flex;
-    list-style: none;
-    gap: 50px;
+.navbar > ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
 }
 /* -------------------
 banner section styles
 --------------------- */
-.banner-container{
-    height: 100%;
-    width: 100%;
-    background-color: rgba(255, 144, 14, 0.1);
-    text-align: center;
+.banner-container {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 144, 14, 0.1);
+  text-align: center;
 }
-.banner-items{
-    padding: 2rem;
+.banner-items {
+  padding: 2rem;
 }
-.banner-title{
-font-size: 35px;
-font-weight: 700;
+.banner-title {
+  font-size: 35px;
+  font-weight: 700;
 }
-.banner-description{
-font-size: 14px;
-color: #727272;
+.banner-description {
+  font-size: 14px;
+  color: #727272;
 }
-.banner-btn, .features-primary-btn{
-font-size: 16px;
-font-weight: 600;
-color: #FFFFFF;
-background-color: #FF900E;
-border-radius: 8px;
-border-style: none;
-padding: 15px 20px;
+.banner-btn,
+.features-primary-btn {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #ff900e;
+  border-radius: 8px;
+  border-style: none;
+  padding: 15px 20px;
 }
-.banner-image{
-    width: 840px;
-    height: 400px;
-    display: block;
-    margin: auto;
+.banner-image {
+  width: 840px;
+  height: 400px;
+  display: block;
+  margin: auto;
 }
 /* --------------------
 features section styles
 ----------------------- */
 
 /* features primary */
-.features-primary{
-    height: 100%;
-    width: 100%;
-    padding: 2rem;
+.features-primary {
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
 }
-.features-primary-info{
-    width: 80%;
+.features-primary-info {
+  width: 80%;
 }
-.features-primary-items{
-    display: flex;
-    align-items: center;
+.features-primary-items {
+  display: flex;
+  align-items: center;
 }
-.feature-image{
-    width: 220px;
-    height: 210px;
+.feature-image {
+  width: 220px;
+  height: 210px;
 }
-.features-primary-info > ul{
-    list-style: none;
+.features-primary-info > ul {
+  list-style: none;
 }
-.span-color-secondary{
-    color: #FF900E;
+.span-color-secondary {
+  color: #ff900e;
 }
 
 /* features secondary */
-.features-secondary{
-    height: 100%;
-    width: 100%;
-    padding: 2rem;
+.features-secondary {
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
 }
-.features-secondary-items{
-    display: flex;
-    align-items: center;
+.features-secondary-items {
+  display: flex;
+  align-items: center;
 }
-.features-secondary-info{
-    width: 40%;
+.features-secondary-info {
+  width: 40%;
 }
-.features-secondary-title{
-    font-size: 40px;
-    font-weight: 700;
-    border-left: 3px solid #FF900E;
-    padding: 0 1rem;
+.features-secondary-title {
+  font-size: 40px;
+  font-weight: 700;
+  border-left: 3px solid #ff900e;
+  padding: 0 1rem;
 }
-.img-architect{
-    height: 900px;
-    width: 550px;
+.img-architect {
+  height: 900px;
+  width: 550px;
 }
-.features-secondary-text-items{
-    padding-left: 1.5rem;
+.features-secondary-text-items {
+  padding-left: 1.5rem;
 }
-
+.features-secondary-btn {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #ff900e;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border-style: none;
+  position: absolute;
+  width: 230px;
+  height: 140px;
+  left: 430px;
+  top: 2240px;
+}
+.btn-text {
+  font-size: 20px;
+}
 /* -------------------------------
 responsive styles by media query 
 -------------------------------- */
 /* responsive navbar */
 @media only screen and (max-width: 576px) {
-    .navbar > ul{
-        flex-direction: column;
-        gap: 10px;
-    }
-    /* responsive banner */
+  .navbar > ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  /* responsive banner */
 
-    .banner-title{
-        font-size: 30px;
-        font-weight: 500;
-    }
-    .banner-description{
-        font-size: 12px;
-    }
-    .banner-btn{
-        font-size: 12px;
-    }
-    .banner-image {
-        width: 90%;
-        height: 100%;
-    }
-    /* responsive features */
-    .features-primary-items{
-        flex-direction: column;
-    }
-    .feature-image{
-        width: 90%;
-        height: 100%;
-    }
-    .features-primary-info{
-        text-align: center;
-    }
-    .features-secondary-items{
-        flex-direction: column;
-    }
+  .banner-title {
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .banner-description {
+    font-size: 12px;
+  }
+  .banner-btn {
+    font-size: 12px;
+  }
+  .banner-image {
+    width: 90%;
+    height: 100%;
+  }
+  /* responsive features */
+  .features-primary-items {
+    flex-direction: column;
+  }
+  .feature-image {
+    width: 90%;
+    height: 100%;
+  }
+  .features-primary-info {
+    text-align: center;
+  }
+  .features-secondary-items {
+    flex-direction: column;
+    text-align: center;
+  }
+  .features-secondary-title {
+    font-size: 30px;
+    font-weight: 500;
+    border-left: none;
+    padding: 0;
+  }
+  .features-secondary-image{
+    width: 100%;
+    height: 100%;
+  }
+  .img-architect {
+    width: 100%;
+    height: 100%;
+}
+  .features-secondary-btn{
+    position: absolute;
+    font-size: 30px;
+    width: 150px;
+    height: 100px;
+    left: 140px;
+    top: 5325px;
+  }
 }
