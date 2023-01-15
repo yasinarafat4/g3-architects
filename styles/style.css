@@ -2,11 +2,14 @@
 common styles or utilities
 ------------------------- */
 *{
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
 }
 body{
     font-family: 'Poppins', sans-serif;
+}
+.span-color-primary, .features-description, .features-secondary-text{
+    color: #727272;
 }
 /* -------------------
 navbar section styles
@@ -40,14 +43,12 @@ banner section styles
 .banner-title{
 font-size: 35px;
 font-weight: 700;
-margin-bottom: 1rem;
 }
 .banner-description{
 font-size: 14px;
 color: #727272;
-margin-bottom: 2em;
 }
-.banner-btn{
+.banner-btn, .features-primary-btn{
 font-size: 16px;
 font-weight: 600;
 color: #FFFFFF;
@@ -66,6 +67,56 @@ padding: 15px 20px;
 features section styles
 ----------------------- */
 
+/* features primary */
+.features-primary{
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+}
+.features-primary-info{
+    width: 80%;
+}
+.features-primary-items{
+    display: flex;
+    align-items: center;
+}
+.feature-image{
+    width: 220px;
+    height: 210px;
+}
+.features-primary-info > ul{
+    list-style: none;
+}
+.span-color-secondary{
+    color: #FF900E;
+}
+
+/* features secondary */
+.features-secondary{
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+}
+.features-secondary-items{
+    display: flex;
+    align-items: center;
+}
+.features-secondary-info{
+    width: 40%;
+}
+.features-secondary-title{
+    font-size: 40px;
+    font-weight: 700;
+    border-left: 3px solid #FF900E;
+    padding: 0 1rem;
+}
+.img-architect{
+    height: 900px;
+    width: 550px;
+}
+.features-secondary-text-items{
+    padding-left: 1.5rem;
+}
 
 /* -------------------------------
 responsive styles by media query 
@@ -93,4 +144,17 @@ responsive styles by media query
         height: 100%;
     }
     /* responsive features */
+    .features-primary-items{
+        flex-direction: column;
+    }
+    .feature-image{
+        width: 90%;
+        height: 100%;
+    }
+    .features-primary-info{
+        text-align: center;
+    }
+    .features-secondary-items{
+        flex-direction: column;
+    }
 }
