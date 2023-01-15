@@ -8,6 +8,9 @@ common styles or utilities
 body {
   font-family: "Poppins", sans-serif;
 }
+section{
+  margin-top: 3rem;
+}
 .span-color-primary,
 .features-description,
 .features-secondary-text,
@@ -36,10 +39,9 @@ navbar section styles
 banner section styles
 --------------------- */
 .banner-container {
-  height: 100%;
-  width: 100%;
   background-color: rgba(255, 144, 14, 0.1);
   text-align: center;
+  margin: 0;
 }
 .banner-items {
   padding: 2rem;
@@ -51,6 +53,8 @@ banner section styles
 .banner-description {
   font-size: 14px;
   color: #727272;
+  width: 60%;
+  margin: 0 auto;
 }
 .banner-btn,
 .features-primary-btn {
@@ -61,6 +65,7 @@ banner section styles
   border-radius: 8px;
   border-style: none;
   padding: 15px 20px;
+  margin-top: 1rem;
 }
 .banner-image {
   width: 840px;
@@ -73,14 +78,15 @@ features section styles
 ----------------------- */
 
 /* features primary */
-.features-primary {
-  margin-top: 50px;
-}
+
 .features-primary-items {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
+/* .features-description{
+  width: 80%;
+} */
 .feature-image {
   width: 250px;
 }
@@ -92,6 +98,9 @@ features section styles
 }
 
 /* features secondary */
+.features-secondary-info{
+  padding: 1em;
+}
 .features-secondary-items {
   display: flex;
   align-items: center;
@@ -139,14 +148,93 @@ facts section styles
   display: flex;
   justify-content: space-evenly;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 50px;
 }
-.activity {
+.facts-items{
+  padding: 1em;
+}
+/* -------------------------------------------------
+  transform, transition, and animation styles start
+  ------------------------------------------------- */
+  .awards-activity{
+  width: 150px;
+  padding: 1em 2em;
+  border-radius: 5px;
+  border: 1px solid #ff900e;
+  transition: 4s;
+  float: left;
+  transition-duration: 5s;
+}
+.awards-activity:hover {
+  transform: rotate(360deg);
+}
+
+
+.projects-activity {
   width: 150px;
   padding: 1em 2em;
   border-radius: 5px;
   border: 1px solid #ff900e;
 }
+.projects-activity:hover{
+  animation-name: on-off;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out; 
+  animation-delay:0.5;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+  color: #ffffff;
+}
+@keyframes on-off {
+  0%{
+    background-color: rgb(217, 65, 95);
+  }
+  100%{
+    background-color: rgba(67, 185, 232, 0.895);
+  }
+}
+
+.customers-activity {
+  width: 150px;
+  padding: 1em 2em;
+  border-radius: 5px;
+  border: 1px solid #ff900e;
+  transition: 4s;
+  transition-duration: 5s;
+}
+.customers-activity:hover {
+  transform: rotate(360deg);
+}
+.emails-activity {
+  width: 150px;
+  padding: 1em 2em;
+  border-radius: 5px;
+  border: 1px solid #ff900e;
+}
+.emails-activity:hover{
+  animation-name: text;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out; 
+  animation-delay:0.5;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+  color: #ffffff;
+}
+@keyframes text {
+  0%{
+    background-color: rgb(87, 187, 226);
+  }
+  100%{
+    background-color: rgb(217, 65, 95);
+  }
+}
+
+/* -----------------------------------------------
+  transform, transition, and animation styles end
+  ------------------------------------------------ */
+
 .facts-title {
   font-size: 40px;
   font-weight: 700;
@@ -212,6 +300,7 @@ responsive styles by media query
     font-weight: 500;
   }
   .banner-description {
+    width: 100%;
     font-size: 12px;
   }
   .banner-btn {
@@ -222,12 +311,12 @@ responsive styles by media query
     height: 100%;
   }
   /* responsive features */
+  .features-primary-images {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
   .features-primary-items {
     flex-direction: column;
-  }
-  .feature-image {
-    width: 90%;
-    height: 100%;
   }
   .features-primary-info {
     text-align: center;
