@@ -8,7 +8,7 @@ common styles or utilities
 body {
   font-family: "Poppins", sans-serif;
 }
-section{
+section {
   margin-top: 3rem;
 }
 .span-color-primary,
@@ -18,6 +18,7 @@ section{
 .sponsors-description {
   color: #727272;
 }
+
 /* -------------------
 navbar section styles
 ---------------------- */
@@ -29,7 +30,6 @@ navbar section styles
   width: 100%;
   height: 20vh;
 }
-
 .navbar > ul {
   display: flex;
   list-style: none;
@@ -73,20 +73,17 @@ banner section styles
   display: block;
   margin: auto;
 }
+
 /* --------------------
 features section styles
 ----------------------- */
 
 /* features primary */
-
 .features-primary-items {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-/* .features-description{
-  width: 80%;
-} */
 .feature-image {
   width: 250px;
 }
@@ -98,7 +95,7 @@ features section styles
 }
 
 /* features secondary */
-.features-secondary-info{
+.features-secondary-info {
   padding: 1em;
 }
 .features-secondary-items {
@@ -141,6 +138,7 @@ features section styles
 .btn-text {
   font-size: 20px;
 }
+
 /* -----------------
 facts section styles
 ------------------- */
@@ -150,13 +148,18 @@ facts section styles
   text-align: center;
   margin-top: 50px;
 }
-.facts-items{
+.facts-title {
+  font-size: 40px;
+  font-weight: 700;
+}
+.facts-items {
   padding: 1em;
 }
+
 /* -------------------------------------------------
   transform, transition, and animation styles start
   ------------------------------------------------- */
-  .awards-activity{
+.awards-activity {
   width: 150px;
   padding: 1em 2em;
   border-radius: 5px;
@@ -169,28 +172,27 @@ facts section styles
   transform: rotate(360deg);
 }
 
-
 .projects-activity {
   width: 150px;
   padding: 1em 2em;
   border-radius: 5px;
   border: 1px solid #ff900e;
 }
-.projects-activity:hover{
+.projects-activity:hover {
   animation-name: on-off;
   animation-duration: 2.5s;
-  animation-timing-function: ease-in-out; 
-  animation-delay:0.5;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-play-state: running;
   color: #ffffff;
 }
 @keyframes on-off {
-  0%{
+  0% {
     background-color: rgb(217, 65, 95);
   }
-  100%{
+  100% {
     background-color: rgba(67, 185, 232, 0.895);
   }
 }
@@ -212,21 +214,21 @@ facts section styles
   border-radius: 5px;
   border: 1px solid #ff900e;
 }
-.emails-activity:hover{
+.emails-activity:hover {
   animation-name: text;
   animation-duration: 2.5s;
-  animation-timing-function: ease-in-out; 
-  animation-delay:0.5;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-play-state: running;
   color: #ffffff;
 }
 @keyframes text {
-  0%{
+  0% {
     background-color: rgb(87, 187, 226);
   }
-  100%{
+  100% {
     background-color: rgb(217, 65, 95);
   }
 }
@@ -234,11 +236,6 @@ facts section styles
 /* -----------------------------------------------
   transform, transition, and animation styles end
   ------------------------------------------------ */
-
-.facts-title {
-  font-size: 40px;
-  font-weight: 700;
-}
 
 /* --------------------
 sponsors section styles
@@ -256,6 +253,7 @@ sponsors section styles
   justify-content: space-evenly;
   margin-bottom: 50px;
 }
+
 /* ------------------ 
 comment section styles
 -------------------- */
@@ -269,13 +267,25 @@ comment section styles
   font-size: 40px;
   font-weight: 700;
 }
+.textarea{
+  border-radius: 4px;
+  background-color: #f8f8f8e0;
+  font-size: 16px;
+}
 .submit-btn {
   background-color: #ff900e;
   color: #ffffff;
   padding: 15px 25px;
   border-style: none;
   border-radius: 10px;
+  margin-top: 1rem;
 }
+.submit-btn:hover{
+  background-color: #0997a7fc;
+  border: 2px solid #f60c0ce3;
+  color: #ffffff;
+}
+
 /* ----------
 footer styles 
 ------------- */
@@ -284,6 +294,7 @@ footer {
   padding: 20px;
   text-align: center;
 }
+
 /* -------------------------------
 responsive styles by media query 
 -------------------------------- */
@@ -310,6 +321,7 @@ responsive styles by media query
     width: 90%;
     height: 100%;
   }
+
   /* responsive features */
   .features-primary-images {
     grid-template-columns: repeat(1, 1fr);
@@ -331,10 +343,6 @@ responsive styles by media query
     border-left: none;
     padding: 0;
   }
-  .features-secondary-image {
-    width: 100%;
-    height: 100%;
-  }
   .img-architect {
     width: 100%;
     height: 100%;
@@ -348,6 +356,7 @@ responsive styles by media query
     font-size: 30px;
     left: 115px;
   }
+
   /* responsive facts */
   .facts-activities {
     flex-direction: column;
@@ -362,6 +371,7 @@ responsive styles by media query
   .facts-items {
     text-align: center;
   }
+
   /* responsive sponsor */
   .logo {
     flex-direction: column;
@@ -369,3 +379,6 @@ responsive styles by media query
     gap: 20px;
   }
 }
+/* --------
+ STYLE END
+---------- */
